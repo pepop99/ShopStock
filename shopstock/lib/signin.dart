@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'dart:developer';
 
 class signIn extends StatefulWidget {
   @override
@@ -12,9 +13,16 @@ class _signInState extends State<signIn> {
     english = newValue;
   });
 
-  List<String> languages = ["English", "हिन्दी","मराठी","తెలుగు","മലയാളം"];
+//  List<String> languages = ["English", "हिन्दी","मराठी","తెలుగు","മലയാളം"];
+  Map<String, bool> langs = {
+  "English" : true,
+  "हिन्दी" : false,
+  "मराठी" : false,
+  "తెలుగు" : false,
+  "മലയാളം" : false,
+  };
   bool _isChecked = true;
-  String _currLang = '';
+  String _currLang = "English";
 
   @override
   Widget build(BuildContext context) {
@@ -54,16 +62,15 @@ class _signInState extends State<signIn> {
 //                new Checkbox(value: english, onChanged: _onEnglish),
 //
 //              ],),
-              languages.map((t) => CheckboxListTile(
-                title: Text(t),
-                value: _isChecked,
-                onChanged: (val) {
+              langs.keys.map((String t) => CheckboxListTile(
+                title: new Text(t),
+                value: langs[t],
+                onChanged: (bool val) {
                   setState(() {
-                    _isChecked = val;
-                    if (val == true) {
-                      _currLang = t;
-                    }
+                    langs[t] = val;
                   });
+                  langs[_currLang] = false;
+                  _currLang = t;
                 },
               )).toList()
             ),
