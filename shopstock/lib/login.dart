@@ -124,6 +124,22 @@ class loginPage extends StatelessWidget {
                       fontWeight: FontWeight.bold),
                 ),
                 SizedBox(height: 50),
+                _orCreateAccount(context),
+                SizedBox(
+                  height: 30,
+                ),
+                Column(
+                  children: <Widget>[
+                    Text(
+                      "--OR--",
+                      style: TextStyle(
+                          color: Colors.black, fontWeight: FontWeight.bold),
+                    ),
+                    SizedBox(
+                      height: 30,
+                    ),
+                  ],
+                ),
                 Text(
                   "Login To Account",
                   style: TextStyle(
@@ -159,22 +175,7 @@ class loginPage extends StatelessWidget {
                     color: Theme.of(context).primaryColor,
                   ),
                 ),
-                SizedBox(
-                  height: 50,
-                ),
-                Column(
-                  children: <Widget>[
-                    Text(
-                      "--OR--",
-                      style: TextStyle(
-                          color: Colors.black, fontWeight: FontWeight.bold),
-                    ),
-                    SizedBox(
-                      height: 45,
-                    ),
-                    _orCreateAccount(context),
-                  ],
-                ),
+
               ],
             ),
           ),
