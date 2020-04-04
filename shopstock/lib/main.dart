@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shopstock/login.dart';
 import 'package:shopstock/signin.dart';
 
 void main() => runApp(MyApp());
@@ -14,7 +15,8 @@ class MyApp extends StatelessWidget {
         primaryColor: Color.fromRGBO(78, 80, 245, 1),
         accentColor: Color.fromRGBO(78, 80, 245, 1),
       ),
-      home: Scaffold(body: signIn()),
-      );
+      //home: Scaffold(body: signIn()),
+      home: Scaffold(body: loginPage()),
+    );
   }
 }

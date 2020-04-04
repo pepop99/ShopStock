@@ -53,6 +53,7 @@ class _signInState extends State<signIn> {
               style: TextStyle(
                 color: Colors.white,
                 fontSize: 24,
+                fontWeight: FontWeight.w500,
               ),
               textAlign: TextAlign.center,
             ),
