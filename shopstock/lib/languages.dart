@@ -1,15 +1,13 @@
 import 'package:flutter/material.dart';
 import 'dart:developer';
-
-//import 'package:shopstock/userselect.dart';
 import 'package:shopstock/login.dart';
 
-class signIn extends StatefulWidget {
+class languages extends StatefulWidget {
   @override
-  _signInState createState() => _signInState();
+  _languagesState createState() => _languagesState();
 }
 
-class _signInState extends State<signIn> {
+class _languagesState extends State<languages> {
   bool english = false;
 
   void _onEnglish(bool newValue) => setState(() {

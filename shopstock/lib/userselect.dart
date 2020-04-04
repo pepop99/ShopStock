@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'dart:developer';
 
 import 'package:shopstock/login.dart';
+import 'package:shopstock/shopkeeperSignUp.dart';
 
 class userSelect extends StatefulWidget {
   @override
@@ -92,7 +93,7 @@ class _userSelectState extends State<userSelect> {
                         ),
                       ],
                     ),
-                    onPressed: (){},
+                    onPressed: ()=>Navigator.push(context, MaterialPageRoute(builder: (context)=> shopKeeperSignIn())),
                     color: Color.fromRGBO(78, 80, 245, 1),
                   ),
                 ],

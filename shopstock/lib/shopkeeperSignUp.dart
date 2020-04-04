@@ -1,6 +1,61 @@
 import 'package:flutter/material.dart';
 
 class shopKeeperSignIn extends StatelessWidget {
+  Widget _buildName() {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: <Widget>[
+        Text(
+          "Full Name",
+          style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
+        ),
+        SizedBox(
+          height: 15,
+        ),
+        Container(
+          child: TextField(
+            keyboardType: TextInputType.text,
+            style: TextStyle(color: Colors.black),
+            decoration: InputDecoration(
+                contentPadding: EdgeInsets.only(top: 10),
+                prefixIcon: Icon(
+                  Icons.person,
+                  color: Colors.black,
+                ),
+                hintText: 'Full Name'),
+          ),
+        ),
+      ],
+    );
+  }
+
+  Widget _buildShopName() {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: <Widget>[
+        Text(
+          "Shop Name",
+          style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
+        ),
+        SizedBox(
+          height: 15,
+        ),
+        Container(
+          child: TextField(
+            keyboardType: TextInputType.text,
+            style: TextStyle(color: Colors.black),
+            decoration: InputDecoration(
+                contentPadding: EdgeInsets.only(top: 10),
+                prefixIcon: Icon(
+                  Icons.home,
+                  color: Colors.black,
+                ),
+                hintText: 'Shop Name'),
+          ),
+        ),
+      ],
+    );
+  }
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -43,9 +98,13 @@ class shopKeeperSignIn extends StatelessWidget {
                 SizedBox(
                   height: 50,
                 ),
-
-
-
+                Column(
+                  children: <Widget>[
+                    _buildName(),
+                    SizedBox(height: 50,),
+                    _buildShopName(),
+                  ],
+                ),
               ],
             ),
           ),
