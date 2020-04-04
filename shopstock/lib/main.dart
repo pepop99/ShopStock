@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
         primaryColor: Color.fromRGBO(78, 80, 245, 1),
         accentColor: Color.fromRGBO(78, 80, 245, 1),
       ),
-      home: signIn(),
+      home: Scaffold(body: signIn()),
       );
   }
 }

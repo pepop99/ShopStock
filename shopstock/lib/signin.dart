@@ -75,6 +75,34 @@ class _signInState extends State<signIn> {
               )).toList()
             ),
           ),
+          SizedBox(
+            height: 50,
+          ),
+          RaisedButton.icon(
+              color: Theme.of(context).primaryColor,
+              onPressed: () {},
+              icon: Icon(
+                Icons.location_on,
+                color: Colors.white,
+              ),
+              label: Text(
+                "Use your current location",
+                style: TextStyle(color: Colors.white),
+              )),
+          SizedBox(
+            height: 33,
+          ),
+          RaisedButton(
+            child: Text(
+              "NEXT",
+              style: TextStyle(
+                fontSize: 20,
+                color: Colors.white,
+              ),
+            ),
+            onPressed: () {},
+            color: Theme.of(context).primaryColor,
+          ),
         ],
       ),
     );
