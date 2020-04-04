@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'dart:developer';
 
+import 'package:shopstock/userselect.dart';
+
 class signIn extends StatefulWidget {
   @override
   _signInState createState() => _signInState();
@@ -95,7 +97,7 @@ class _signInState extends State<signIn> {
                           color: Colors.white,
                         ),
                       ),
-                      onPressed: () {},
+                      onPressed: ()=>Navigator.push(context, MaterialPageRoute(builder: (context)=> userSelect())),
                       color: Theme.of(context).primaryColor,
                     ),
                   ],

@@ -72,7 +72,7 @@ class loginPage extends StatelessWidget {
     );
   }
 
-  Widget _orSignUp(context) {
+  Widget _orCreateAccount(context) {
     return GestureDetector(
       onTap: () => print('Sign Up pressed'),
       child: Container(
@@ -85,7 +85,7 @@ class loginPage extends StatelessWidget {
           ),
           color: Theme.of(context).primaryColor,
           child: Text(
-            'Sign Up',
+            'Create Account',
             style: TextStyle(
                 color: Colors.white, fontSize: 20,),
           ),
@@ -96,83 +96,88 @@ class loginPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: EdgeInsets.all(20),
-      height: double.infinity,
-      color: Colors.white,
-      child: SingleChildScrollView(
-        child: Column(
-          children: <Widget>[
-            Container(
-              padding: EdgeInsets.only(top: 100),
-              child: Center(
-                child: Icon(
-                  Icons.shopping_cart,
-                  color: Theme.of(context).primaryColor,
-                  size: 130,
-                ),
-              ),
-            ),
-            Text(
-              "ShopStock",
-              style: TextStyle(
-                  color: Theme.of(context).primaryColor,
-                  fontSize: 30,
-                  fontWeight: FontWeight.bold),
-            ),
-            SizedBox(height: 50),
-            Text(
-              "Login To Account",
-              style: TextStyle(
-                color: Colors.black,
-                fontSize: 35,
-                fontWeight: FontWeight.bold,
-              ),
-              textAlign: TextAlign.center,
-            ),
-            SizedBox(
-              height: 50,
-            ),
-            _buildNumber(),
-            SizedBox(
-              height: 30,
-            ),
-            _buildOTP(),
-            _OTPnotReceived(),
-            SizedBox(
-              height: 50,
-            ),
-            Container(
-              height: 50,
-              width: 200,
-              child: RaisedButton(
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10)),
-                child: Text(
-                  "Enter",
-                  style: TextStyle(color: Colors.white, fontSize: 20),
-                ),
-                onPressed: () {},
-                color: Theme.of(context).primaryColor,
-              ),
-            ),
-            SizedBox(
-              height: 50,
-            ),
-            Column(
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        body: Container(
+          padding: EdgeInsets.all(20),
+          height: double.infinity,
+          color: Colors.white,
+          child: SingleChildScrollView(
+            child: Column(
               children: <Widget>[
+                Container(
+                  padding: EdgeInsets.only(top: 100),
+                  child: Center(
+                    child: Icon(
+                      Icons.shopping_cart,
+                      color: Theme.of(context).primaryColor,
+                      size: 130,
+                    ),
+                  ),
+                ),
                 Text(
-                  "--OR--",
+                  "ShopStock",
                   style: TextStyle(
-                      color: Colors.black, fontWeight: FontWeight.bold),
+                      color: Theme.of(context).primaryColor,
+                      fontSize: 30,
+                      fontWeight: FontWeight.bold),
+                ),
+                SizedBox(height: 50),
+                Text(
+                  "Login To Account",
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 35,
+                    fontWeight: FontWeight.bold,
+                  ),
+                  textAlign: TextAlign.center,
                 ),
                 SizedBox(
-                  height: 45,
+                  height: 50,
                 ),
-                _orSignUp(context),
+                _buildNumber(),
+                SizedBox(
+                  height: 30,
+                ),
+                _buildOTP(),
+                _OTPnotReceived(),
+                SizedBox(
+                  height: 50,
+                ),
+                Container(
+                  height: 50,
+                  width: 200,
+                  child: RaisedButton(
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10)),
+                    child: Text(
+                      "Enter",
+                      style: TextStyle(color: Colors.white, fontSize: 22),
+                    ),
+                    onPressed: () {},
+                    color: Theme.of(context).primaryColor,
+                  ),
+                ),
+                SizedBox(
+                  height: 50,
+                ),
+                Column(
+                  children: <Widget>[
+                    Text(
+                      "--OR--",
+                      style: TextStyle(
+                          color: Colors.black, fontWeight: FontWeight.bold),
+                    ),
+                    SizedBox(
+                      height: 45,
+                    ),
+                    _orCreateAccount(context),
+                  ],
+                ),
               ],
             ),
-          ],
+          ),
         ),
       ),
     );
