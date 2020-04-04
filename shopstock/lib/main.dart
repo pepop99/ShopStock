@@ -16,14 +16,9 @@ class MyApp extends StatelessWidget {
         primaryColor: Color.fromRGBO(78, 80, 245, 1),
         accentColor: Color.fromRGBO(78, 80, 245, 1),
       ),
-<<<<<<< Updated upstream
-      //home: Scaffold(body: signIn()),
-      home: Scaffold(body: loginPage()),
-=======
 //      home: Scaffold(body: signIn()),
       home: Scaffold(body: userSelect()),
 
->>>>>>> Stashed changes
     );
   }
 }
