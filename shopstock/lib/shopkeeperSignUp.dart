@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'package:shopstock/shoptypeselection.dart';
+
 class shopKeeperSignIn extends StatefulWidget {
   @override
   _shopKeeperSignInState createState() => _shopKeeperSignInState();
@@ -135,12 +137,12 @@ class _shopKeeperSignInState extends State<shopKeeperSignIn> {
             child: Column(
               children: <Widget>[
                 Container(
-                  padding: EdgeInsets.only(top: 100),
+                  padding: EdgeInsets.only(top: 40),
                   child: Center(
                     child: Icon(
                       Icons.shopping_cart,
                       color: Theme.of(context).primaryColor,
-                      size: 130,
+                      size: 40,
                     ),
                   ),
                 ),
@@ -148,7 +150,7 @@ class _shopKeeperSignInState extends State<shopKeeperSignIn> {
                   "ShopStock",
                   style: TextStyle(
                       color: Theme.of(context).primaryColor,
-                      fontSize: 30,
+                      fontSize: 20,
                       fontWeight: FontWeight.bold),
                 ),
                 SizedBox(height: 50),
@@ -183,6 +185,27 @@ class _shopKeeperSignInState extends State<shopKeeperSignIn> {
                 ),
                 SizedBox(
                   height: 50,
+                ),
+                RaisedButton(
+                  child: Column(
+                    children: <Widget>[
+                      SizedBox(
+                        height: 20,
+                      ),
+                      Text(
+                        "Sign Me Up",
+                        style: TextStyle(
+                          fontSize: 20,
+                          color: Colors.white,
+                        ),
+                      ),
+                      SizedBox(
+                        height: 20,
+                      ),
+                    ],
+                  ),
+                  onPressed: ()=>Navigator.push(context, MaterialPageRoute(builder: (context)=> shopTypeSelect())),
+                  color: Color.fromRGBO(78, 80, 245, 1),
                 ),
 //                Container(
 //                  height: 50,

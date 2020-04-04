@@ -108,12 +108,12 @@ class loginPage extends StatelessWidget {
             child: Column(
               children: <Widget>[
                 Container(
-                  padding: EdgeInsets.only(top: 100),
+                  padding: EdgeInsets.only(top: 40),
                   child: Center(
                     child: Icon(
                       Icons.shopping_cart,
                       color: Theme.of(context).primaryColor,
-                      size: 130,
+                      size: 40,
                     ),
                   ),
                 ),
@@ -121,7 +121,7 @@ class loginPage extends StatelessWidget {
                   "ShopStock",
                   style: TextStyle(
                       color: Theme.of(context).primaryColor,
-                      fontSize: 30,
+                      fontSize: 20,
                       fontWeight: FontWeight.bold),
                 ),
                 SizedBox(height: 50),
