@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shopstock/shoptypeselection.dart';
 
 class customerSignUp extends StatelessWidget {
   Widget _buildName() {
@@ -100,6 +101,7 @@ class customerSignUp extends StatelessWidget {
             style: TextStyle(
               color: Colors.white, fontSize: 20,),
           ),
+          onPressed: ()=>Navigator.push(context, MaterialPageRoute(builder: (context)=> shopTypeSelect())),
         ),
       ),
     );

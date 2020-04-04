@@ -37,7 +37,7 @@ class _shopTypeSelectState extends State<shopTypeSelect> {
               height: 50,
             ),
             Text(
-              "Select your shop type",
+              "Select One",
               style: TextStyle(
                   color: Colors.black, fontSize: 30, fontWeight: FontWeight.bold),
             ),
@@ -68,6 +68,8 @@ class _shopTypeSelectState extends State<shopTypeSelect> {
                         ],
                       ),
 //                      onPressed: ()=>Navigator.push(context, MaterialPageRoute(builder: (context)=> customerSignUp())),
+                      onPressed: (){},
+
                       color: Color.fromRGBO(78, 80, 245, 1),
                     ),
                     SizedBox(
@@ -93,6 +95,8 @@ class _shopTypeSelectState extends State<shopTypeSelect> {
                         ],
                       ),
 //                      onPressed: ()=>Navigator.push(context, MaterialPageRoute(builder: (context)=> shopKeeperSignIn())),
+                      onPressed: (){},
+
                       color: Color.fromRGBO(78, 80, 245, 1),
                     ),
                   ],
