@@ -67,7 +67,7 @@ class _userSelectState extends State<userSelect> {
                         ),
                       ],
                     ),
-                    onPressed: ()=>Navigator.push(context, MaterialPageRoute(builder: (context)=> loginPage())),
+                    onPressed: (){},
                     color: Color.fromRGBO(78, 80, 245, 1),
                   ),
                   SizedBox(
@@ -92,7 +92,7 @@ class _userSelectState extends State<userSelect> {
                         ),
                       ],
                     ),
-                    onPressed: ()=>Navigator.push(context, MaterialPageRoute(builder: (context)=> loginPage())),
+                    onPressed: (){},
                     color: Color.fromRGBO(78, 80, 245, 1),
                   ),
                 ],

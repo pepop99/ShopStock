@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shopstock/userselect.dart';
 
 class loginPage extends StatelessWidget {
   Widget _buildNumber() {
@@ -79,7 +80,7 @@ class loginPage extends StatelessWidget {
         height: 50,
         width: 200,
         child: RaisedButton(
-          onPressed: () {},
+          onPressed: ()=>Navigator.push(context, MaterialPageRoute(builder: (context)=> userSelect())),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(10),
           ),
@@ -171,7 +172,7 @@ class loginPage extends StatelessWidget {
                       "Enter",
                       style: TextStyle(color: Colors.white, fontSize: 22),
                     ),
-                    onPressed: () {},
+                    onPressed: (){},
                     color: Theme.of(context).primaryColor,
                   ),
                 ),
