@@ -3,6 +3,8 @@ import 'dart:developer';
 
 import 'package:shopstock/login.dart';
 import 'package:shopstock/shopkeeperSignUp.dart';
+import 'package:shopstock/customerSignUp.dart';
+
 
 class userSelect extends StatefulWidget {
   @override
@@ -68,7 +70,7 @@ class _userSelectState extends State<userSelect> {
                         ),
                       ],
                     ),
-                    onPressed: (){},
+                    onPressed: ()=>Navigator.push(context, MaterialPageRoute(builder: (context)=> customerSignUp())),
                     color: Color.fromRGBO(78, 80, 245, 1),
                   ),
                   SizedBox(
