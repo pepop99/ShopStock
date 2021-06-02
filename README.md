@@ -1,1 +1,1 @@
-ShopStock
+ShopStock - Inventory Management
